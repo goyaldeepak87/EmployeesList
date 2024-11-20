@@ -8,14 +8,12 @@ const EmployeelistData = () => {
     const dispatch = useDispatch();
     const { employees, loading, error } = useSelector((state) => state.employees);
     const [newEmployee, setNewEmployee] = useState({ name: '', position: '', email: '' });
-    const [editingEmployee, setEditingEmployee] = useState(null);
 
     useEffect(() => {
         dispatch(fetchEmployees());
     }, [dispatch]);
 
     const handleEditEmployee = (employee) => {
-        setEditingEmployee(employee);
         setNewEmployee({ name: employee.name, position: employee.position, email: employee.email });
         handleButtonClick();
     };
@@ -39,7 +37,7 @@ const EmployeelistData = () => {
 
             {loading && <p>Loading...</p>}
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {employees.map((employee) => (
                     <Card key={employee.id} style={{ margin: '10px', width: '200px' }}>
                         <CardContent>
