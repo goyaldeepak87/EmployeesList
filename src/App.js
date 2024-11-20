@@ -7,9 +7,9 @@ import EmployeelistData from './Component/EmployeelistData';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename='EmployeesList'>
         <Routes>
-          <Route path="/" element={<EmployeelistData />} />
+          <Route path="/EmployeesList" element={<EmployeelistData />} />
           <Route path="/add-employee/" element={<Employeelist />} />
         </Routes>
       </BrowserRouter>
