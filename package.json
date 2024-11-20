@@ -2,7 +2,7 @@
   "name": "my-app",
   "homepage": "https://goyaldeepak87.github.io/EmployeesList",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
